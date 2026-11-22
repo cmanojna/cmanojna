@@ -1,0 +1,200 @@
+<svg width="850" height="340" viewBox="0 0 850 340" xmlns="http://w3.org">
+  <style>
+    .card {
+      fill: #0d1117;
+      stroke: #30363d;
+      stroke-width: 2;
+    }
+
+    .header-bar {
+      fill: #161b22;
+    }
+
+    .mono {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      fill: #c9d1d9;
+    }
+
+    .title {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+      fill: #58a6ff;
+    }
+
+    .key {
+      fill: #79c0ff;
+      font-weight: bold;
+    }
+
+    .val {
+      fill: #e6edf3;
+    }
+
+    .muted {
+      fill: #8b949e;
+    }
+
+    .cursor {
+      fill: #3fb950;
+      animation: blink 1s step-end infinite;
+    }
+
+    /* Typing Animation */
+    .type-line1 {
+      stroke-dasharray: 400;
+      animation: typing1 2.2s steps(28, end) forwards;
+    }
+
+    .type-line2 {
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards 2.2s;
+    }
+
+    @keyframes typing1 {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes floatAvatar {
+
+      0%,
+      100% {
+        transform: translate(580px, 75px);
+      }
+
+      50% {
+        transform: translate(580px, 69px);
+      }
+    }
+
+    .avatar-group {
+      animation: floatAvatar 3s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Main Window Frame -->
+  <rect x="1" y="1" width="848" height="338" rx="12" class="card" />
+
+  <!-- Top Terminal Bar -->
+  <path d="M 1 13 Q 1 1 13 1 L 837 1 Q 849 1 849 13 L 849 36 L 1 36 Z" class="header-bar" />
+  <circle cx="22" cy="18" r="6" fill="#ff5f56" />
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e" />
+  <circle cx="62" cy="18" r="6" fill="#27c93f" />
+  <text x="425" y="23" text-anchor="middle" class="mono muted" font-size="13">visitor@github: ~</text>
+
+  <!-- ================= LEFT SIDE: TYPING + TECH STACK ================= -->
+  <g transform="translate(35, 72)">
+    <!-- Prompt & Typing Header -->
+    <text x="0" y="0" class="title type-line1">$ whoami &gt; Manojna C</text>
+    <rect x="275" y="-16" width="10" height="20" class="cursor" />
+
+    <text x="0" y="28" class="mono muted type-line2">Systems &amp; Software Developer</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="45" x2="480" y2="45" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4 4" />
+
+    <!-- Neofetch-style Info Block -->
+    <g transform="translate(0, 72)" class="mono">
+      <text x="0" y="0">
+        <tspan class="key">Languages</tspan>
+        <tspan class="muted"> .... </tspan>
+        <tspan class="val">Python, Rust, C</tspan>
+      </text>
+      <text x="0" y="28">
+        <tspan class="key">Domain</tspan>
+        <tspan class="muted"> .. </tspan>
+        <tspan class="val">AI, Blockchain, cloud & Infra</tspan>
+      </text>
+      <text x="0" y="56">
+        <tspan class="key">Focus</tspan>
+        <tspan class="muted"> ........ </tspan>
+        <tspan class="val">Distributed Computing, RAG</tspan>
+      </text>
+      <text x="0" y="84">
+        <tspan class="key">Environment</tspan>
+        <tspan class="muted"> .. </tspan>
+        <tspan class="val">Linux / Neovim / Git</tspan>
+      </text>
+      <text x="0" y="112">
+        <tspan class="key">Status</tspan>
+        <tspan class="muted"> ....... </tspan>
+        <tspan class="val">Open to opportunities </tspan>
+      </text>
+    </g>
+
+    <!-- Pixel Language Pills -->
+    <g transform="translate(0, 200)" shape-rendering="crispEdges">
+      <!-- Python Pill -->
+      <rect x="0" y="0" width="95" height="28" fill="#1f6feb" rx="4" />
+      <rect x="6" y="8" width="12" height="12" fill="#ffd43b" />
+      <text x="26" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">Python</text>
+
+      <!-- Rust Pill -->
+      <rect x="108" y="0" width="82" height="28" fill="#b7410e" rx="4" />
+      <rect x="114" y="8" width="12" height="12" fill="#ffffff" />
+      <text x="134" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">Rust</text>
+
+      <!-- C Pill -->
+      <rect x="203" y="0" width="65" height="28" fill="#238636" rx="4" />
+      <rect x="209" y="8" width="12" height="12" fill="#a8b9cc" />
+      <text x="229" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">C</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT SIDE: PIXEL PORTRAIT ================= -->
+  <!-- Pixel Grid (Each unit = 12px) -->
+  <g class="avatar-group" shape-rendering="crispEdges">
+    <!-- Subtle Pixel Backdrop Frame -->
+    <rect x="-12" y="-12" width="216" height="216" fill="#161b22" stroke="#30363d" stroke-width="2" />
+
+    <!-- Hair (Top & Sides) -->
+    <rect x="48" y="12" width="96" height="12" fill="#2d201c" />
+    <rect x="36" y="24" width="120" height="24" fill="#2d201c" />
+    <rect x="24" y="36" width="12" height="48" fill="#2d201c" />
+    <rect x="156" y="36" width="12" height="48" fill="#2d201c" />
+
+    <!-- Face Skin -->
+    <rect x="36" y="48" width="120" height="72" fill="#e0ac69" />
+    <rect x="48" y="120" width="96" height="12" fill="#e0ac69" />
+
+    <!-- Eyes / Glasses -->
+    <rect x="48" y="66" width="36" height="24" fill="#0d1117" />
+    <rect x="108" y="66" width="36" height="24" fill="#0d1117" />
+    <rect x="84" y="72" width="24" height="6" fill="#8b949e" />
+    <!-- Eye Shine -->
+    <rect x="54" y="72" width="8" height="8" fill="#58a6ff" />
+    <rect x="114" y="72" width="8" height="8" fill="#58a6ff" />
+
+    <!-- Slight Smile -->
+    <rect x="78" y="104" width="36" height="6" fill="#8d5524" />
+
+    <!-- Neck -->
+    <rect x="72" y="132" width="48" height="12" fill="#c68642" />
+
+    <!-- Hoodie / Shirt -->
+    <rect x="24" y="144" width="144" height="48" fill="#1f6feb" />
+    <rect x="60" y="144" width="72" height="12" fill="#1158c7" />
+    <!-- Hoodie Strings -->
+    <rect x="72" y="156" width="6" height="24" fill="#e6edf3" />
+    <rect x="114" y="156" width="6" height="24" fill="#e6edf3" />
+  </g>
+</svg>
