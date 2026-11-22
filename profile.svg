@@ -1,5 +1,4 @@
-<svg width="850" height="350" viewBox="0 0 850 350" xmlns="http://w3.org">
-  <style>
+<svg width="850" height="350" viewBox="0 0 850 350" xmlns="http://www.w3.org/2000/svg">  <style>
     .card {
       fill: #0d1117;
       stroke: #30363d;
