@@ -1,119 +1,95 @@
-<svg width="850" height="340" viewBox="0 0 850 340" xmlns="http://w3.org">
+<svg width="850" height="350" viewBox="0 0 850 350" xmlns="http://w3.org">
   <style>
     .card {
       fill: #0d1117;
       stroke: #30363d;
       stroke-width: 2;
     }
-
     .header-bar {
       fill: #161b22;
     }
-
     .mono {
       font-family: 'Courier New', Courier, monospace;
       font-size: 15px;
       fill: #c9d1d9;
     }
-
     .title {
       font-family: 'Courier New', Courier, monospace;
       font-size: 20px;
       font-weight: bold;
       fill: #58a6ff;
     }
-
     .key {
       fill: #79c0ff;
       font-weight: bold;
     }
-
     .val {
       fill: #e6edf3;
     }
-
     .muted {
       fill: #8b949e;
     }
-
     .cursor {
       fill: #3fb950;
       animation: blink 1s step-end infinite;
     }
-
-    /* Typing Animation */
-    .type-line1 {
-      stroke-dasharray: 400;
-      animation: typing1 2.2s steps(28, end) forwards;
-    }
-
-    .type-line2 {
+    .fade-1 {
       opacity: 0;
-      animation: fadeIn 0.4s ease forwards 2.2s;
+      animation: fadeIn 0.5s ease forwards 1.6s;
     }
-
-    @keyframes typing1 {
-      from {
-        clip-path: inset(0 100% 0 0);
-      }
-
-      to {
-        clip-path: inset(0 0 0 0);
-      }
+    .fade-2 {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards 2.0s;
     }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .fade-3 {
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards 2.4s;
+    }
+    .avatar-group {
+      animation: floatAvatar 3s ease-in-out infinite;
     }
 
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      50% { opacity: 0; }
     }
-
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
     @keyframes floatAvatar {
-
-      0%,
-      100% {
-        transform: translate(580px, 75px);
-      }
-
-      50% {
-        transform: translate(580px, 69px);
-      }
-    }
-
-    .avatar-group {
-      animation: floatAvatar 3s ease-in-out infinite;
+      0%, 100% { transform: translate(585px, 72px); }
+      50% { transform: translate(585px, 66px); }
     }
   </style>
 
   <!-- Main Window Frame -->
-  <rect x="1" y="1" width="848" height="338" rx="12" class="card" />
+  <rect x="1" y="1" width="848" height="348" rx="12" class="card" />
 
   <!-- Top Terminal Bar -->
   <path d="M 1 13 Q 1 1 13 1 L 837 1 Q 849 1 849 13 L 849 36 L 1 36 Z" class="header-bar" />
   <circle cx="22" cy="18" r="6" fill="#ff5f56" />
   <circle cx="42" cy="18" r="6" fill="#ffbd2e" />
   <circle cx="62" cy="18" r="6" fill="#27c93f" />
-  <text x="425" y="23" text-anchor="middle" class="mono muted" font-size="13">visitor@github: ~</text>
+  <text x="425" y="23" text-anchor="middle" class="mono muted" font-size="13">manojna-c@github: ~</text>
 
   <!-- ================= LEFT SIDE: TYPING + TECH STACK ================= -->
   <g transform="translate(35, 72)">
-    <!-- Prompt & Typing Header -->
-    <text x="0" y="0" class="title type-line1">$ whoami &gt; Manojna C</text>
-    <rect x="275" y="-16" width="10" height="20" class="cursor" />
+    <!-- Prompt & Safe SMIL Typing Reveal -->
+    <text x="0" y="0" class="title">$ whoami &gt; Manojna C</text>
+    <!-- Sliding Mask Box for Safe Typing Effect -->
+    <rect x="0" y="-20" width="245" height="26" fill="#0d1117">
+      <animate attributeName="x" from="0" to="245" dur="1.6s" fill="freeze" />
+      <animate attributeName="width" from="245" to="0" dur="1.6s" fill="freeze" />
+    </rect>
+    <!-- Blinking Cursor -->
+    <rect x="245" y="-16" width="10" height="20" class="cursor" />
 
-    <text x="0" y="28" class="mono muted type-line2">Systems &amp; Software Developer</text>
+    <text x="0" y="28" class="mono muted fade-1">Systems &amp; Software Developer</text>
 
     <!-- Divider -->
-    <line x1="0" y1="45" x2="480" y2="45" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="0" y1="45" x2="500" y2="45" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4 4" />
 
     <!-- Neofetch-style Info Block -->
-    <g transform="translate(0, 72)" class="mono">
+    <g transform="translate(0, 72)" class="mono fade-2">
       <text x="0" y="0">
         <tspan class="key">Languages</tspan>
         <tspan class="muted"> .... </tspan>
@@ -121,8 +97,8 @@
       </text>
       <text x="0" y="28">
         <tspan class="key">Domain</tspan>
-        <tspan class="muted"> .. </tspan>
-        <tspan class="val">AI, Blockchain, cloud & Infra</tspan>
+        <tspan class="muted"> ....... </tspan>
+        <tspan class="val">AI, Blockchain, Cloud &amp; Infra</tspan>
       </text>
       <text x="0" y="56">
         <tspan class="key">Focus</tspan>
@@ -137,64 +113,82 @@
       <text x="0" y="112">
         <tspan class="key">Status</tspan>
         <tspan class="muted"> ....... </tspan>
-        <tspan class="val">Open to opportunities </tspan>
+        <tspan class="val">Open to opportunities</tspan>
       </text>
     </g>
 
     <!-- Pixel Language Pills -->
-    <g transform="translate(0, 200)" shape-rendering="crispEdges">
-      <!-- Python Pill -->
+    <g transform="translate(0, 204)" class="fade-3" shape-rendering="crispEdges">
       <rect x="0" y="0" width="95" height="28" fill="#1f6feb" rx="4" />
       <rect x="6" y="8" width="12" height="12" fill="#ffd43b" />
       <text x="26" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">Python</text>
 
-      <!-- Rust Pill -->
       <rect x="108" y="0" width="82" height="28" fill="#b7410e" rx="4" />
       <rect x="114" y="8" width="12" height="12" fill="#ffffff" />
       <text x="134" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">Rust</text>
 
-      <!-- C Pill -->
       <rect x="203" y="0" width="65" height="28" fill="#238636" rx="4" />
       <rect x="209" y="8" width="12" height="12" fill="#a8b9cc" />
       <text x="229" y="19" class="mono" fill="#ffffff" font-weight="bold" font-size="14">C</text>
     </g>
   </g>
 
-  <!-- ================= RIGHT SIDE: PIXEL PORTRAIT ================= -->
-  <!-- Pixel Grid (Each unit = 12px) -->
-  <g class="avatar-group" shape-rendering="crispEdges">
-    <!-- Subtle Pixel Backdrop Frame -->
-    <rect x="-12" y="-12" width="216" height="216" fill="#161b22" stroke="#30363d" stroke-width="2" />
+  <!-- ================= RIGHT SIDE: CUSTOM PIXEL PORTRAIT ================= -->
+  <g class="avatar-group" transform="translate(585, 72)" shape-rendering="crispEdges">
+    <rect x="-8" y="-8" width="232" height="232" fill="#161b22" stroke="#30363d" stroke-width="2" />
+    
+    <!-- Spiky Dark Brown/Olive Hair -->
+    <rect x="88" y="8" width="16" height="8" fill="#3a331e" />
+    <rect x="112" y="12" width="24" height="8" fill="#3a331e" />
+    <rect x="76" y="16" width="80" height="8" fill="#3a331e" />
+    <rect x="68" y="24" width="104" height="12" fill="#3a331e" />
+    <rect x="64" y="36" width="120" height="12" fill="#3a331e" />
+    <rect x="148" y="48" width="44" height="20" fill="#3a331e" />
+    <rect x="156" y="68" width="36" height="28" fill="#3a331e" />
+    <rect x="148" y="96" width="36" height="24" fill="#3a331e" />
 
-    <!-- Hair (Top & Sides) -->
-    <rect x="48" y="12" width="96" height="12" fill="#2d201c" />
-    <rect x="36" y="24" width="120" height="24" fill="#2d201c" />
-    <rect x="24" y="36" width="12" height="48" fill="#2d201c" />
-    <rect x="156" y="36" width="12" height="48" fill="#2d201c" />
+    <!-- Raised Left Arm + Red Wristband -->
+    <rect x="12" y="32" width="48" height="12" fill="#c68b3f" />
+    <rect x="8" y="44" width="60" height="16" fill="#c68b3f" />
+    <rect x="60" y="36" width="10" height="24" fill="#a83228" />
+    <rect x="12" y="60" width="44" height="20" fill="#c68b3f" />
+    <rect x="16" y="80" width="36" height="16" fill="#b37830" />
 
-    <!-- Face Skin -->
-    <rect x="36" y="48" width="120" height="72" fill="#e0ac69" />
-    <rect x="48" y="120" width="96" height="12" fill="#e0ac69" />
+    <!-- Head & Face Skin -->
+    <rect x="72" y="48" width="76" height="16" fill="#d49849" />
+    <rect x="64" y="64" width="92" height="24" fill="#d49849" />
+    <rect x="60" y="88" width="92" height="28" fill="#d49849" />
+    <rect x="68" y="116" width="72" height="16" fill="#c68b3f" />
 
-    <!-- Eyes / Glasses -->
-    <rect x="48" y="66" width="36" height="24" fill="#0d1117" />
-    <rect x="108" y="66" width="36" height="24" fill="#0d1117" />
-    <rect x="84" y="72" width="24" height="6" fill="#8b949e" />
-    <!-- Eye Shine -->
-    <rect x="54" y="72" width="8" height="8" fill="#58a6ff" />
-    <rect x="114" y="72" width="8" height="8" fill="#58a6ff" />
+    <!-- Ear -->
+    <rect x="152" y="96" width="20" height="24" fill="#c68b3f" />
+    <rect x="156" y="102" width="10" height="12" fill="#9c6828" />
 
-    <!-- Slight Smile -->
-    <rect x="78" y="104" width="36" height="6" fill="#8d5524" />
+    <!-- Eyebrows & Happy Closed Eyes -->
+    <rect x="72" y="66" width="18" height="6" fill="#3a331e" />
+    <rect x="106" y="68" width="24" height="6" fill="#3a331e" />
+    <rect x="74" y="78" width="14" height="5" fill="#2b2416" />
+    <rect x="108" y="80" width="18" height="5" fill="#2b2416" />
+
+    <!-- Nose & Big Laughing Smile -->
+    <rect x="82" y="88" width="8" height="12" fill="#b37830" />
+    <rect x="76" y="104" width="36" height="6" fill="#ffffff" />
+    <rect x="78" y="110" width="32" height="8" fill="#b84a39" />
 
     <!-- Neck -->
-    <rect x="72" y="132" width="48" height="12" fill="#c68642" />
+    <rect x="88" y="132" width="44" height="20" fill="#b37830" />
 
-    <!-- Hoodie / Shirt -->
-    <rect x="24" y="144" width="144" height="48" fill="#1f6feb" />
-    <rect x="60" y="144" width="72" height="12" fill="#1158c7" />
-    <!-- Hoodie Strings -->
-    <rect x="72" y="156" width="6" height="24" fill="#e6edf3" />
-    <rect x="114" y="156" width="6" height="24" fill="#e6edf3" />
+    <!-- Grey Polo Shirt & Navy Collar -->
+    <rect x="28" y="96" width="28" height="12" fill="#2c3540" />
+    <rect x="20" y="108" width="48" height="36" fill="#8b949e" />
+    <rect x="16" y="144" width="168" height="72" fill="#8b949e" />
+    
+    <!-- Navy Blue Collar -->
+    <rect x="76" y="140" width="16" height="20" fill="#2c3540" />
+    <rect x="116" y="140" width="32" height="20" fill="#2c3540" />
+    <rect x="92" y="156" width="28" height="12" fill="#2c3540" />
+    
+    <!-- Clean Shirt Shading -->
+    <rect x="148" y="160" width="36" height="56" fill="#6e7681" />
   </g>
 </svg>
