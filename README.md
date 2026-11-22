@@ -1,16 +1,34 @@
-## Hi there 👋
+<div align="center">
+  <img src="./profile.svg" alt="Manojna C GitHub Profile" width="100%" />
+</div>
 
-<!--
-**cmanojna/cmanojna** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br />
 
-Here are some ideas to get you started:
+### 👋 Hey there! Welcome to my corner of GitHub.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm **Manojna**, a developer passionate about understanding how software works under the hood from low-level systems and distributed infrastructure to intelligent AI pipelines and decentralized protocols.
+
+---
+
+### 🧩 What I'm Building & Learning
+
+| Domain | Focus Areas |
+| :--- | :--- |
+| **Systems & Distributed Computing** | Concurrency, memory safety, fault-tolerant services, and low-level networking |
+| **AI & Machine Learning** | Retrieval-Augmented Generation (RAG), LLM tooling, and Python-based ML workflows |
+| **Blockchain & Cloud Infra** | Decentralized protocols, consensus fundamentals, and containerized deployments |
+
+---
+
+### 📫 Let's Connect
+
+<p align="left">
+  <a href="cmanojnamanu@gmail.com">
+    <img src="https://shields.io" alt="Gmail" />
+  </a>
+</p>
+
+<div align="center">
+  <sub>⚡ Thanks for stopping by feel free to explore, star, or reach out!</sub>
+</div>
+
