@@ -69,7 +69,7 @@
   <circle cx="22" cy="18" r="6" fill="#ff5f56" />
   <circle cx="42" cy="18" r="6" fill="#ffbd2e" />
   <circle cx="62" cy="18" r="6" fill="#27c93f" />
-  <text x="425" y="23" text-anchor="middle" class="mono muted" font-size="13">manojna-c@github: ~</text>
+  <text x="425" y="23" text-anchor="middle" class="mono muted" font-size="13">cmanojna@github: ~</text>
 
   <!-- ================= LEFT SIDE: TYPING + TECH STACK ================= -->
   <g transform="translate(35, 72)">
